@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ian Kimble's Guessing Game!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Page styled with Bootstrap and some custom styles-->
+
+    <h1 style="text-align: center">Ian's Guessing Game!</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4" style="text-align: center; font-size: 100px"> Guess The Letter?</h1>
+                        <p class="lead" style="text-align: center;">Rules Of The Game</p>
+                        <p style="text-align: center"> Select any of the first ten (10) letters of the alphabet keys and see if you've guessed the letter correctly.
+                            <br> You will have 5 attempts. 
+                            <br> Good luck!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="background-color: blue; height: 200px; text-align: center;">
+                <h1>Attempts <span id="guess-attempts"></strong>
+                </span></h1>
+            </div>
+            <div class="col-md-6" style="background-color: yellow; text-align: center;">
+                <h2>What's Your Guess?</h2>
+                <p>
+                    <input type="text" onkeydown="userguess()">
+                </p>
+                <h3> Use Input Box to log your guess</h3>
+                
+                <!-- used span to log Users input, I used code from activity 21; events-->
+                
+                <h5>(You just typed
+                    <strong>
+                        <span id="user-guess">...Nothing.)</strong>
+                    </span>
+                </h5>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="height: 20px;"></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="wins" style="text-align: center; background-color: green; height: 80px;">
+                <h1> Wins</h1>
+            </div>
+            <div class="col-md-6" id="loses" style="text-align: center; background-color: red; height: 80px;">
+                <h1>Loses</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div clas="row">
+            <div class="col-md-12" ; style="height: 30px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center; background-color: gray; height:30px;">
+                Created by Ian Kimble 2018
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+// My psuedocode process
+// create an array for the letters to be used
+// create an onkey function that will take in the users unput 
+// create a function that will allow the computer to pull numbers from the array randomly 
+// create an if else statement similar to the rock, paper, scicors game that will select 1 of the 10 letter keys 
+//create a inner html that will input the results of the guesses
+        var userText = document.getElementById("user-guess");
+
+        document.onkeyup = function (event) {
+            userText.textContent = event.key;
+        };
+
+
+        var letterKey = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+        console.log(letterKey);
+
+   var computerGuess = letterKey[Math.floor(Math.random() * letterKey.length)];
+
+function autoGuess() {
+      computerGuess = lettersKey[Math.floor(Math.random() * letterKey.length)];
+      console.log(Computer);
+
+}
+
+      if (playerGuess === letterKey) {
+            won++;
+            attempts = 5;
+            letterKey = [];
+
+      }
+
+
+ if (letterKey.indexOf(userText) >= 0) {
+
+} else {
+   
+      letterKey.push(userText);
+      document.getElementById('playerGuess').innerHTML = letterKey;
+      console.log(math);
+
+}
+
+
+ document.getElementById('wins').innerHTML = wins;
+      document.getElementById('loses').innerHTML = loses;
+      document.getElementById('guess-attempts').innerHTML = attempts;
+
+        var guessesLeft = 5;
+        console.log(guessesLeft);
+
+        var guessesUsed = 0;
+        console.log(guessesUsed);
+
+        var wins = 0;
+        console.log(wins);
+
+        var loses = 0;
+        console.log(loses);
+
+
+    </script>
+
+</body>
+
+</html>
